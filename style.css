@@ -1,7 +1,7 @@
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: justified;
-    background-color:lightblue;
+    background-color:cornflowerblue;
 }
 
 h1 {
@@ -20,18 +20,28 @@ h1 {
 }
 
 h3 {
-    text-align:center;
+    font-family: Copperplate Gothic Light, fantasy;
+    text-align: center;
+    width: 50%;
+    background-color: aliceblue;
+    box-align: ;
 }
 
 table {
+    width: 40%;
+    table-layout: auto;
     margin: 1px auto;
     color: aliceblue;
     background-size: cover;
     background-color: #333333;
     justify-content: center;
-    gap: 3px;
     border: 8px solid aliceblue;
     border-style: ridge;
+}
+
+td, th {
+    border: 1px solid gray;
+    padding: 5px;
 }
 
 button {
@@ -44,4 +54,9 @@ button {
     border-radius: 5px; 
     display: inline-block;
     margin: 5px;
+}
+
+.TableT {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
 }
