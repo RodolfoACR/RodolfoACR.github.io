@@ -21,44 +21,62 @@
             I worked as an auditing accountant assistant, as a technology training assistant, and as pool cleaner.
         </p>
         <h3>Skills & Levels of Expertise</h2>
-        <table>
+        <table id="Skills">
             <tr>
                 <td class="TableT">Skill</td>
                 <td class="TableT">Level</td>
             </tr>
             <tr>
-                <td>Python</td>
-                <td>Advance</td>
+                <td class="Cells">Python</td>
+                <td class="Cells">Advance</td>
             </tr>
             <tr>
-                <td>JavaScript</td>
-                <td>Medium</td>
+                <td class="Cells">JavaScript</td>
+                <td class="Cells">Medium</td>
             </tr>
             <tr>
-                <td>HTML/CSS</td>
-                <td>Medium</td>
+                <td class="Cells">HTML/CSS</td>
+                <td class="Cells">Medium</td>
             </tr>
             <tr>
-                <td>Git</td>
-                <td>Basic</td>
+                <td class="Cells">Git</td>
+                <td class="Cells">Basic</td>
             </tr>
             <tr>
-                <td>Excel</td>
-                <td>Advance</td>
+                <td class="Cells">Excel</td>
+                <td class="Cells">Advance</td>
             </tr>
             <tr>
-                <td>SQL</td>
-                <td>Basic</td>
+                <td class="Cells">SQL</td>
+                <td class="Cells">Basic</td>
             </tr>
             <tr>
-                <td>English</td>
-                <td>Advance</td>
+                <td class="Cells">English</td>
+                <td class="Cells">Advance</td>
             </tr>
             <tr>
-                <td>Spanish</td>
-                <td>Native</td>
+                <td class="Cells">Spanish</td>
+                <td class="Cells">Native</td>
             </tr>
         </table>
-        <button><a id="Magic" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Magic Button</a></button>
+        <table id="Extras">
+            <tr>
+                <td>
+                    <input id="Color" type="text" placeholder="Enter background color"><br>
+                    <button><a id="Magic" onclick="changeBackgroundColor()">Magic Button</a></button>
+                </td>
+                <td><div>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img id="Link" src="Dontclicktosuspiciouslinks.jpg" width="180" height="200" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+                    </a>
+                </div></td>
+            </tr>
+        </table>
+        <script>
+            function changeBackgroundColor() {
+                const color = document.getElementById('Color').value;
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        </script>
     </body>
 </html>
