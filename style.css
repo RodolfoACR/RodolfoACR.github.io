@@ -6,6 +6,7 @@ body {
     background-image: url('background.gif');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -79,7 +80,6 @@ h3 {
 
 #Link {
     margin: 5px auto;
-    float: right;
 }
 
 .TableT {
