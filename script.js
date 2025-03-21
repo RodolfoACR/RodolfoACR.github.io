@@ -15,25 +15,26 @@ fetch(API_URL)
     .then(response => response.json())
     .then(data => {
         const articlesHTML = data.articles.map(article => {
-            return `<li>
-                <div class="row">
-                    <div class="col-3">
-                        <a href="${article.url}">
-                            <img src="${article.urlToImage}" height="130">
+            return `<li class="container-fluid">
+                <div class="row align-items-center" style=" margin: 10px;">
+                    <div class="col-md-3 col-12 text-center">
+                        <a href="${article.url}" target="_blank">
+                            <img src="${article.urlToImage}" class="img-fluid rounded" style="max-height: 130px; width: auto;">
                         </a>
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <p>${article.description}</p>
+                        <a href="${article.url}" class="fw-bold text-primary" target="_blank">${article.title}</a>
                     </div>
-                </div>
-                <div class="row">
-                    <a href="${article.url}">${article.title}</a>
                 </div>
             </li>`;
         }).join('');
 
-        HTMLResponse.innerHTML = `<ul>${articlesHTML}</ul>`;
+        HTMLResponse.innerHTML = `<ul class="list-unstyled">${articlesHTML}</ul>`;
     })
+    .catch(error => {
+        HTMLResponse.innerHTML = `<p>Error fetching news: ${error.message}</p>`;
+    });
 
 const techNewsHeader = document.querySelector('#News h2');
 techNewsHeader.style.cursor = 'pointer';
